@@ -1,0 +1,78 @@
+@import "../utils/var";
+@import "../utils/mixins";
+
+.jq-selectbox {
+  width: 100%;
+  z-index: 1;
+}
+.jq-selectbox__select {
+  height: 25px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid @lightBlue2;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0 20px 0 0;
+}
+.jq-selectbox__select{
+  &:active{
+    box-shadow: none;
+  }
+}
+.jq-selectbox__select:hover{
+  background: transparent;
+}
+.jq-selectbox__dropdown {
+  box-shadow: none;
+  border: 1px solid @lightBlue2;
+  border-radius: 0;
+  margin: 5px 0 0 0;
+  background: @lightBlue2;
+}
+.jq-selectbox {
+  ul{
+    text-align: left;
+  }
+}
+.jq-selectbox li {
+  color:@darkBlue;
+  .transition(0.5s);
+}
+.jq-selectbox li.selected {
+  color:@lightBlue2;
+  background-color: @darkBlue;
+}
+.jq-selectbox li{
+  &:hover {
+    background: @darkBlue;
+    color:@lightBlue2;
+    cursor: pointer;
+  }
+}
+.jq-selectbox__trigger {
+  display: inline-block;
+  border-left: none;
+  position: absolute;
+  top: 4px;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  i{
+    font-size: 16px;
+    color: @lightBlue2;
+    position: absolute;
+  }
+}
+.jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+  border-bottom: 1px solid @lightBlue2;
+}
+.jq-selectbox__select-text {
+  color: @lightBlue2;
+  text-shadow: none;
+  line-height: 22px;
+  text-align: left;
+}
+.jq-selectbox.opened .jq-selectbox__trigger.rotated {
+  //.transform(0, 0, 180deg)
+}

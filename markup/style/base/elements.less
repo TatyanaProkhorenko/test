@@ -1,0 +1,40 @@
+@import "../utils/var";
+
+input[type=text],
+input[type=email],
+input[type=password],
+select{
+  display: block;
+  padding-right: 10px;
+  padding-left: 0;
+  width: 100%;
+  line-height: 18px;
+  font-size: 14px;
+  padding-bottom: 6px;
+  font-family: @primary-font;
+  background: transparent;
+  color: @lightBlue2;
+  border: none;
+  border-bottom: 1px solid @lightBlue2;
+  outline: none;
+  &:focus{
+    outline: none;
+    &::-webkit-input-placeholder {color: transparent;}
+    &::-moz-placeholder {color: transparent;}
+    &:-moz-placeholder {color: transparent;}
+    &:-ms-input-placeholder {color: transparent;}
+  }
+  &::-webkit-input-placeholder {color: @lightBlue2;}
+  &::-moz-placeholder {color: @lightBlue2;}
+  &:-moz-placeholder {color: @lightBlue2;}
+  &:-ms-input-placeholder {color: @lightBlue2;}
+}
+input[type=submit],
+button[type=submit]{
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.box-input{
+  margin-bottom: 27px;
+}

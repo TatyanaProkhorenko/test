@@ -1,0 +1,40 @@
+
+
+@smobile: ~'only screen and (max-device-width : 480px)';
+@mobile: ~'only screen and (min-device-width : 481px) and (max-device-width : 680px)';
+@tablet: ~'only screen and (min-device-width : 681px) and (max-device-width : 960px)';
+
+.transition(@args) {
+  -webkit-transition: @args;
+  -moz-transition: @args;
+  -o-transition: @args;
+  transition: @args;
+}
+
+.border-radius(@r) {
+  -webkit-border-radius: @r;
+  -moz-border-radius: @r;
+  border-radius: @r;
+}
+
+.clearfix{
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+.transform(@x-coord, @y-coord, @angle){
+  -webkit-transform: translate(@x-coord, @y-coord) rotate(@angle);
+  -moz-transform: translate(@x-coord, @y-coord) rotate(@angle);
+  -ms-transform: translate(@x-coord, @y-coord) rotate(@angle);
+  -o-transform: translate(@x-coord, @y-coord) rotate(@angle);
+  transform: translate(@x-coord, @y-coord) rotate(@angle);
+}
+
+
+

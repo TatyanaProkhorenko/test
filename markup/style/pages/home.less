@@ -1,0 +1,23 @@
+@import "../utils/var";
+@import "../utils/mixins";
+@import "../layout/_select";
+
+
+.info{
+  padding-top: 25px;
+}
+.infoForm{
+  max-width: 390px;
+  margin: 0 auto;
+  &__title{
+    font-weight: bold;
+    margin-bottom: 27px;
+    color: @white;
+  }
+}
+.infoForm__step{
+  display: none;
+  &.active{
+    display: block;
+  }
+}

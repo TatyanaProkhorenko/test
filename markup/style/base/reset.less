@@ -1,0 +1,47 @@
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input, button, textarea{
+  &:focus{
+    outline: none;
+  }
+}
+a{
+  text-decoration: none;
+  &:focus{
+    text-decoration: none;
+  }
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}

@@ -1,0 +1,162 @@
+@import "../utils/var";
+@import "../utils/mixins";
+
+.nav{
+  background: @darkestBlue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+.nav__menu{
+  background: @darkBlue;
+  padding: 10px 0;
+  position: relative;
+  .clearfix;
+  &--left {
+    float: left;
+  }
+  &--right{
+    float: right;
+    padding-top: 2px;
+  }
+  &_iconMenu{
+    font-size: 20px;
+    color: @white;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    .transition(all 0.5s);
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+  &_socialIcon{
+    color: @purple;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    background: @white;
+    .border-radius(5px);
+    display: inline-block;
+    vertical-align: middle;
+    .transition(all 0.5s);
+    &:hover{
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+//=====search====
+.search {
+  position: relative;
+  width: 110px;
+  display: inline-block;
+  margin-right: 20px;
+  input[type=text]{
+    width: 100%;
+    padding: 6px 35px 6px 10px;
+    text-align: center;
+    border: none;
+    background: @darkestBlue;
+    color: @white;
+    .border-radius(15px);
+    position: relative;
+    &::-webkit-input-placeholder {color: @white;}
+    &::-moz-placeholder {color: @white;}
+    &:-moz-placeholder {color: @white;}
+    &:-ms-input-placeholder {color: @white;}
+    &:focus{
+      outline: none;
+      &::-webkit-input-placeholder {color: transparent;}
+      &::-moz-placeholder {color: transparent;}
+      &:-moz-placeholder {color: transparent;}
+      &:-ms-input-placeholder {color: transparent;}
+    }
+  }
+}
+.search__btn{
+  background: transparent;
+  border: 1px solid @white;
+  .border-radius(50%);
+  position: absolute;
+  padding: 3px 4px;
+  top: 50%;
+  right: 3px;
+  .transform(0, -50%, 0deg);
+  &:hover{
+    cursor: pointer;
+  }
+  &_icon{
+    color: @white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+//=====card====
+.card{
+  position: relative;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  &__sum{
+    font-size: 11px;
+    color: @white;
+    line-height: 12px;
+    padding: 2px 6px;
+    background: @red;
+    .border-radius(15px);
+    position: absolute;
+    top: 0;
+    left: -15px;
+  }
+  i{
+    font-size: 18px;
+    color: @white;
+    line-height: 18px;
+    vertical-align: middle;
+    font-weight: bold;
+  }
+}
+.nav__title{
+  padding: 15px 0;
+  background: @middleBlue;
+  box-shadow: 0 3px 11px -5px rgba(0,0,0,1);
+  z-index: 1;
+  &_name{
+    font-size: 16px;
+    line-height: 20px;
+    color: @white;
+  }
+}
+
+.nav__steps{
+  padding-top: 15px;
+  box-shadow: 0 2px 5px -2px rgba(0,0,0,1);
+}
+.wrap__steps{
+  max-width: 680px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+.steps{
+  display: table;
+  width: 100%;
+  &__li{
+    display: table-cell;
+    color: @white;
+    padding: 15px 0;
+    font-size: 16px;
+    line-height: 18px;
+    border-bottom: 2px solid transparent;
+    &:hover{
+      cursor: pointer;
+      opacity: 0.9;
+    }
+    &.active{
+      border-bottom: 2px solid @white;
+    }
+  }
+}
